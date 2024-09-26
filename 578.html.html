@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(https://wallpapers.com/images/hd/blue-and-white-background-bjv8qww5i150r5qg.jpg);
+        }
+
+        .box {
+            padding: 25px 50px 50px 50px;
+            box-sizing: border-box;
+            
+            
+            
+            max-width: 400px; 
+        }
+
+        form {
+            margin: 0; 
+        }
+        button
+        {
+            background-color: #007bff;
+            height: 25px;
+            width: 80px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="m_cont">
+        <pre class="m_heading"><h1>Signup</h1></pre>
+        <form onsubmit="return ValidateEmail() && CheckPassword()">
+            <h3>E-mail</h3>
+            <input type="text" id="m_email" name="email">
+            <h3>Password</h3>
+            <input type="password" id="m_password" name="password">
+            <h3>Confirm Password</h3>
+            <input type="password" id="m_confirm_password" name="confirm_password">
+            <br><br>
+            <button type="submit" class="m_b1">Sign up</button>
+        </form>
+
+        <p>Already have an account? <a href="login2.html">Login</a></p>
+    </div>
+</div>
+
+<script>
+    function ValidateEmail() {
+        var email = document.getElementById("m_email").value;
+        var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailRegex.test(email)) {
+            return true;
+        } else {
+            alert("You have entered an invalid email address!");
+            return false;
+        }
+    }
+
+    function CheckPassword() {
+        var password = document.getElementById("m_password").value;
+        var confirmPassword = document.getElementById("m_confirm_password").value;
+
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long!");
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>
