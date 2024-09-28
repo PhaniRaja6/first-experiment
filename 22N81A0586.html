@@ -3,74 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>My First Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
-        .login-container {
-            width: 300px;
-            margin: 100px auto;
-            padding: 30px;
-            background-color: white;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        h2 {
-            text-align: center;
+        h1 {
             color: #333;
         }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .form-footer {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .form-footer a {
-            text-decoration: none;
-            color: #4CAF50;
+        button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/submit-login" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required placeholder="Enter your username">
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Enter your password">
-
-            <input type="submit" value="Login">
-        </form>
-
-        <div class="form-footer">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
-        </div>
-    </div>
+    <h1>Welcome to My First Webpage</h1>
+    <p>This is a simple HTML webpage with a button below.</p>
+    <button onclick="alert('Hello! You clicked the button!')">Click Me!</button>
 
 </body>
 </html>
